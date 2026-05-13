@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу | Наталья и Дмитрий</title>
+    <meta name="description" content="Свадебное приглашение Максима и Анны">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f4f4f4;
+            --paper: #ffffff;
+            --text-main: #222222;
+            --text-light: #555555;
+            --muted: #a0a0a0;
+            --line: #d8d8d8;
+            --accent: #931515;
+
+            --dc1: #0a0a0d;
+            --dc2: #5b4434;
+            --dc3: #886755;
+            --dc4: #dcd1c3;
+            --dc5: #eadbd3;
+            --dc6: #9bb196;
+            --dc7: #5b6b45;
+
+            --font-serif: "Cormorant Garamond", serif;
+            --font-sans: "Montserrat", sans-serif;
+
+            --container-width: 640px;
+            --section-x: clamp(24px, 6vw, 56px);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background: var(--bg);
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            font-weight: 300;
+            background:
+                radial-gradient(circle at top, rgba(220, 209, 195, 0.28), transparent 34rem),
+                var(--bg);
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        img,
+        svg,
+        iframe {
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        ::selection {
+            background: #e8e1da;
+        }
+
+        .page {
+            width: min(100%, var(--container-width));
+            margin: 0 auto;
+            background: var(--paper);
+            overflow-x: clip;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.055);
+        }
+
+        .section {
+            padding: clamp(56px, 9vw, 84px) var(--section-x);
+        }
+
+        .section--compact {
+            padding-top: clamp(42px, 7vw, 64px);
+            padding-bottom: clamp(42px, 7vw, 64px);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .serif {
+            font-family: var(--font-serif);
+        }
+
+        .muted {
+            color: var(--text-light);
+        }
+
+        .title-xl {
+            margin: 0;
+            font-family: var(--font-serif);
+            font-size: clamp(3.25rem, 12vw, 5.2rem);
+            font-weight: 300;
+            line-height: 0.92;
+            letter-spacing: 0.01em;
+        }
+
+        .title-lg {
+            margin: 0;
+            font-family: var(--font-serif);
+            font-size: clamp(3rem, 10vw, 4.6rem);
+            font-weight: 300;
+            line-height: 1;
+        }
+
+        .title-md {
+            margin: 0;
+            font-family: var(--font-serif);
+            font-size: clamp(2.45rem, 8vw, 3.7rem);
+            font-weight: 300;
+            line-height: 1.05;
+        }
+
+        .body-text {
+            margin: 0;
+            color: var(--text-light);
+            font-size: 0.86rem;
+            line-height: 1.85;
+            font-weight: 300;
+        }
+
+        .hero {
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: clamp(42px, 8vw, 76px);
+            padding-bottom: clamp(48px, 8vw, 76px);
+        }
+
+        .names {
+            margin-bottom: clamp(36px, 7vw, 56px);
+        }
+
+        .names__and {
+            margin: -0.2em 0 -0.1em;
+            padding-right: 0.25em;
+            font-family: var(--font-serif);
+            font-size: clamp(1.75rem, 6vw, 2.5rem);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .polaroid {
+            position: relative;
+            width: min(82%, 390px);
+            margin: 0 auto clamp(42px, 8vw, 64px);
+            padding: 12px 12px 44px;
+            background: #fff;
+            box-shadow: 0 18px 38px rgba(0, 0, 0, 0.13);
+            transform: rotate(-2deg);
+            transform-origin: center;
+        }
+
+        .polaroid--small {
+            width: min(76%, 370px);
+            margin-top: 34px;
+            margin-bottom: 0;
+            padding-bottom: 48px;
+            transform: rotate(3deg);
+        }
+
+        .polaroid__image {
+            aspect-ratio: 3 / 4;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(145deg, rgba(255, 255, 255, 0.35), transparent 45%),
+                linear-gradient(135deg, #ededed, #f8f8f8 45%, #dcd1c3);
+        }
+
+        .polaroid__image--dark {
+            background:
+                radial-gradient(circle at 35% 50%, rgba(255, 255, 255, 0.55), transparent 16%),
+                radial-gradient(circle at 65% 58%, rgba(0, 0, 0, 0.7), transparent 25%),
+                linear-gradient(135deg, #f7f7f7, #d9d9d9 48%, #222);
+            filter: grayscale(1);
+        }
+
+        .placeholder-label {
+            font-size: 0.68rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(80, 80, 80, 0.56);
+        }
+
+        .polaroid__caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            text-align: center;
+            font-family: var(--font-serif);
+            font-size: clamp(1.55rem, 5vw, 2.2rem);
+            font-style: italic;
+            line-height: 1;
+        }
+
+        .clip {
+            position: absolute;
+            top: -27px;
+            left: 26px;
+            width: 48px;
+            height: 72px;
+            color: rgba(90, 90, 90, 0.48);
+            transform: rotate(14deg);
+            pointer-events: none;
+        }
+
+        .tape {
+            position: absolute;
+            top: -17px;
+            left: 50%;
+            width: 78px;
+            height: 28px;
+            background: rgba(178, 132, 62, 0.72);
+            transform: translateX(-50%) rotate(9deg);
+            clip-path: polygon(0 10%, 100% 0, 92% 100%, 6% 88%);
+            opacity: 0.82;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .invite-label {
+            margin: 0 0 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.28em;
+            font-family: var(--font-serif);
+            font-size: clamp(1.8rem, 6vw, 2.6rem);
+            line-height: 1;
+            letter-spacing: 0.04em;
+            text-transform: lowercase;
+        }
+
+        .invite-label span {
+            margin-top: 0.16em;
+            font-size: 0.78em;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .date {
+            margin: 0 0 clamp(54px, 10vw, 78px);
+            font-family: var(--font-serif);
+            font-size: clamp(2.7rem, 9vw, 4.2rem);
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: 0.2em;
+            transform: translateX(0.1em);
+        }
+
+        .intro {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .intro h2 {
+            margin-bottom: 22px;
+        }
+
+        .calendar {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .calendar__week,
+        .calendar__days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+        }
+
+        .calendar__week {
+            margin-bottom: 18px;
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        .calendar__days {
+            position: relative;
+            margin-bottom: 20px;
+            font-size: clamp(1.25rem, 4.5vw, 1.7rem);
+            font-weight: 300;
+        }
+
+        .calendar__heart {
+            position: relative;
+            display: grid;
+            place-items: center;
+            width: 48px;
+            height: 48px;
+            color: var(--accent);
+        }
+
+        .calendar__heart span {
+            position: relative;
+            z-index: 2;
+            font-weight: 400;
+        }
+
+        .calendar__heart svg {
+            position: absolute;
+            width: 56px;
+            height: 56px;
+            z-index: 1;
+        }
+
+        .calendar__caption {
+            margin: 0;
+            font-family: var(--font-serif);
+            font-size: clamp(1.55rem, 5vw, 2.25rem);
+            font-style: italic;
+            letter-spacing: 0.12em;
+        }
+
+        .location-card {
+            margin: 28px 0 30px;
+            height: clamp(180px, 38vw, 250px);
+            display: grid;
+            place-items: center;
+            border: 1px solid #efefef;
+            background:
+                linear-gradient(120deg, rgba(255, 255, 255, 0.18), transparent 44%),
+                linear-gradient(90deg, #9bb196, #dcd1c3);
+        }
+
+        .location-card .placeholder-label,
+        .moodboard .placeholder-label {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 30px;
+            border: 1px solid #8d8d8d;
+            background: transparent;
+            color: var(--text-light);
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            line-height: 1;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+        }
+
+        .button:hover {
+            background: #f7f4f1;
+            border-color: #777;
+        }
+
+        .button:active {
+            transform: translateY(1px);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 18px;
+            bottom: 20px;
+            left: 50%;
+            width: 1px;
+            border-left: 1.5px dashed #a9a9a9;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr);
+            gap: 16px;
+            min-height: 92px;
+        }
+
+        .timeline-item + .timeline-item {
+            margin-top: -14px;
+        }
+
+        .timeline-item__content {
+            padding-top: 10px;
+            padding-bottom: 24px;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-item__content {
+            grid-column: 1;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-item__content {
+            grid-column: 3;
+            text-align: left;
+        }
+
+        .timeline-item__icon {
+            grid-column: 2;
+            position: relative;
+            z-index: 1;
+            align-self: start;
+            display: grid;
+            place-items: center;
+            width: 30px;
+            height: 36px;
+            margin-top: 8px;
+            background: #fff;
+            color: #666;
+        }
+
+        .timeline-time {
+            margin-bottom: 5px;
+            font-family: var(--font-serif);
+            font-size: clamp(2.35rem, 8vw, 3.45rem);
+            font-weight: 300;
+            line-height: 0.9;
+        }
+
+        .timeline-text {
+            color: var(--text-light);
+            font-size: 0.72rem;
+            line-height: 1.35;
+        }
+
+        .palette {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px auto 36px;
+        }
+
+        .color-dot {
+            width: clamp(38px, 8.5vw, 48px);
+            height: clamp(38px, 8.5vw, 48px);
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+        }
+
+        .moodboard {
+            height: clamp(130px, 28vw, 180px);
+            display: grid;
+            place-items: center;
+            background: linear-gradient(90deg, var(--dc3), var(--dc4), var(--dc6));
+        }
+
+        .details-icon {
+            width: 40px;
+            height: 40px;
+            margin: 24px auto;
+            color: var(--text-light);
+        }
+
+        .form-box {
+            margin-top: 30px;
+            overflow: hidden;
+            border: 1px solid #ece7e1;
+            background: #faf8f6;
+        }
+
+        .form-placeholder {
+            min-height: 420px;
+            display: grid;
+            place-items: center;
+            padding: 32px;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .form-placeholder p {
+            max-width: 390px;
+            margin: 10px auto 0;
+            font-size: 0.82rem;
+            line-height: 1.7;
+        }
+
+        .form-box iframe {
+            display: block;
+            width: 100%;
+            min-height: 620px;
+            border: 0;
+        }
+
+        .countdown {
+            padding-top: clamp(52px, 8vw, 74px);
+        }
+
+        .countdown-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: clamp(10px, 3vw, 24px);
+            margin-top: 30px;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            display: block;
+            font-family: var(--font-serif);
+            font-size: clamp(2.3rem, 9vw, 4.2rem);
+            font-weight: 300;
+            line-height: 0.9;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .countdown-label {
+            display: block;
+            margin-top: 10px;
+            font-family: var(--font-serif);
+            font-size: clamp(1rem, 3.4vw, 1.35rem);
+            line-height: 1;
+        }
+
+        .final-photo-wrap {
+            padding-bottom: clamp(64px, 11vw, 96px);
+        }
+
+        .footer-note {
+            margin: 36px 0 0;
+            color: var(--text-light);
+            font-size: 0.72rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translate3d(0, 22px, 0);
+            transition:
+                opacity 720ms ease,
+                transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        .reveal[data-reveal="zoom"] {
+            transform: translate3d(0, 18px, 0) scale(0.975);
+        }
+
+        .reveal[data-reveal="zoom"].is-visible {
+            transform: translate3d(0, 0, 0) scale(1);
+        }
+
+        .reveal-delay-1 {
+            transition-delay: 90ms;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 170ms;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 250ms;
+        }
+
+        @media (max-width: 520px) {
+            :root {
+                --section-x: 26px;
+            }
+
+            body {
+                background: #fff;
+            }
+
+            .page {
+                box-shadow: none;
+            }
+
+            .section {
+                padding-top: 56px;
+                padding-bottom: 56px;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .date {
+                letter-spacing: 0.16em;
+                transform: translateX(0.08em);
+            }
+
+            .timeline {
+                max-width: 350px;
+            }
+
+            .timeline-item {
+                grid-template-columns: minmax(0, 1fr) 26px minmax(0, 1fr);
+                gap: 12px;
+            }
+
+            .timeline-item__icon {
+                width: 26px;
+            }
+
+            .timeline-text {
+                font-size: 0.68rem;
+            }
+
+            .countdown-grid {
+                gap: 8px;
+            }
+
+            .polaroid {
+                width: min(86%, 360px);
+            }
+
+            .polaroid--small {
+                width: min(78%, 330px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal,
+            .reveal[data-reveal="zoom"] {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+
+        <section class="section hero text-center">
+            <div class="names reveal">
+                <h1 class="title-xl">Наталья</h1>
+                <div class="names__and">и</div>
+                <h1 class="title-xl">Дмитрий</h1>
+            </div>
+
+        <div class="polaroid reveal reveal-delay-1" data-reveal="zoom">
+				<svg class="clip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"
+        aria-hidden="true">
+        <path
+            d="M10.864 3.535l7.071 7.071a3.535 3.535 0 01-5 5l-8.485-8.485a5.657 5.657 0 118-8l8.485 8.485"
+            stroke-linecap="round" />
+				</svg>
+
+			<div class="polaroid__image">
+        <!-- Вставьте эту строку вместо <span> -->
+        <img src="j-P2AUJQ.jpg" alt="Описание фото">
+			</div>
+			
+		</div>
+
+            <div class="reveal reveal-delay-2">
+                <p class="invite-label">приглашение <span>на</span> свадьбу</p>
+                <p class="date">05 | 09 | 26</p>
+            </div>
+
+            <div class="intro reveal reveal-delay-3">
+                <h2 class="title-md">Уважаемые гости!<h2>
+                <p class="body-text">
+Один день в этом году станет для нас особенно важным, и мы хотим провести его в кругу близких и друзей!
+С большим удовольствием приглашаем
+Вас на нашу свадьбу!
+
+                </p>
+            </div>
+        </section>
+
+        <section class="section section--compact text-center">
+            <h2 class="title-lg reveal">Сентябрь</h2>
+
+            <div class="calendar reveal reveal-delay-1">
+                <div class="calendar__week" aria-hidden="true">
+                    <span>Пн</span>
+                    <span>Вт</span>
+                    <span>Ср</span>
+                    <span>Чт</span>
+                    <span>Пт</span>
+                    <span>Сб</span>
+                    <span>Вс</span>
+                </div>
+
+                <div class="calendar__days" aria-label="Дата свадьбы — 05 сентября 2026 года">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+
+                    <span class="calendar__heart">
+                        <span>5</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"
+                            aria-hidden="true">
+                            <path
+                                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                    </span>
+
+                    <span>6</span>
+                    <span>7</span>
+                </div>
+
+                <p class="calendar__caption">мы станем семьей</p>
+            </div>
+        </section>
+
+        <section class="section section--compact text-center">
+            <h2 class="title-lg reveal">Локация</h2>
+
+            <div class="reveal reveal-delay-1" style="margin-top: 24px;">
+                <p class="body-text">
+					Ждем Вас<br>
+                    в 16 часов 30 минут 05.09.2026<br>
+                    в ресторане «Хуторок»<br>
+                    по адресу: Ростовская обл., Хутор Ленинаван, ул. Ленина, 2
+                </p>
+            </div>
+
+            <div class="location-card reveal reveal-delay-2" data-reveal="zoom">
+                <span class="placeholder-label">Фото места проведения</span>
+            </div>
+
+            <a class="button reveal reveal-delay-3" href="#" target="_blank" rel="noopener">
+                Показать на карте
+            </a>
+        </section>
+
+        <section class="section text-center">
+            <h2 class="title-md reveal" style="margin-bottom: 48px;">Программа дня</h2>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-item__content">
+                        <div class="timeline-time">16:30</div>
+                        <div class="timeline-text">Сбор гостей<br>welcome</div>
+                    </div>
+                    <div class="timeline-item__icon" aria-hidden="true">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-item__content">
+                        <div class="timeline-time">17:00</div>
+                        <div class="timeline-text">Торжественная<br>церемония</div>
+                    </div>
+                    <div class="timeline-item__icon" aria-hidden="true">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-item__content">
+                        <div class="timeline-time">17:30</div>
+                        <div class="timeline-text">Банкет</div>
+                    </div>
+                    <div class="timeline-item__icon" aria-hidden="true">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-item__content">
+                        <div class="timeline-time">21:00</div>
+                        <div class="timeline-text">Торт</div>
+                    </div>
+                    <div class="timeline-item__icon" aria-hidden="true">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-item__content">
+                        <div class="timeline-time">23:00</div>
+                        <div class="timeline-text">Завершение<br>мероприятия</div>
+                    </div>
+                    <div class="timeline-item__icon" aria-hidden="true">
+                        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--compact text-center">
+            <h2 class="title-lg reveal">Дресс-код</h2>
+
+            <p class="body-text reveal reveal-delay-1" style="max-width: 430px; margin: 24px auto 0;">
+                Мы будем очень рады, если вы поддержите цветовую гамму праздника:
+            </p>
+
+            <div class="palette reveal reveal-delay-2" aria-label="Цветовая гамма свадьбы">
+                <div class="color-dot" style="background: var(--dc1);"></div>
+                <div class="color-dot" style="background: var(--dc2);"></div>
+                <div class="color-dot" style="background: var(--dc3);"></div>
+                <div class="color-dot" style="background: var(--dc4);"></div>
+                <div class="color-dot" style="background: var(--dc5);"></div>
+                <div class="color-dot" style="background: var(--dc6);"></div>
+                <div class="color-dot" style="background: var(--dc7);"></div>
+            </div>
+
+            <div class="moodboard reveal reveal-delay-3">
+                <span class="placeholder-label">Мудборд нарядов</span>
+            </div>
+        </section>
+
+        <section class="section section--compact text-center">
+            <h2 class="title-lg reveal">Детали</h2>
+
+            <p class="body-text reveal reveal-delay-1">
+              
+            </p>
+
+            <svg class="details-icon reveal reveal-delay-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="1" aria-hidden="true">
+                <path
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+
+            <p class="body-text reveal reveal-delay-3">
+                 Мы с благодарностью и честью примем любой Ваш презент в коробке или конверте. Но просим не преподносить нам цветов, ведь из-за скорого отъезда наша пара не сможет насладиться их красотой в полной мере.
+            </p>
+        </section>
+
+        <section class="section section--compact text-center" id="rsvp">
+            <h2 class="title-md reveal">Подтвердите присутствие</h2>
+
+            <p class="body-text reveal reveal-delay-1" style="max-width: 450px; margin: 22px auto 0;">
+                Пожалуйста, заполните форму, чтобы мы могли всё подготовить и никого не забыть.
+            </p>
+
+            <div class="form-box reveal reveal-delay-2">
+              
+
+                <!--
+                Пример подключения Яндекс.Формы.
+                Раскомментируйте script и iframe, а блок .form-placeholder выше удалите.
+
+                <script src="https://forms.yandex.ru/_static/embed.js"></script>
+                <iframe
+                    src="https://forms.yandex.ru/u/6a0445a8068ff0558f0d59eb?iframe=1"
+                    name="ya-form-6a0445a8068ff0558f0d59eb">
+                </iframe>
+                -->
+				
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdk437-_DEImce_0Yhr_Iy4llqxgRWZW66MyFntwtxRfq-0ug/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+            </div>
+        </section>
+
+        <section class="section countdown text-center">
+            <h2 class="title-md reveal">До встречи через...</h2>
+
+            <div class="countdown-grid reveal reveal-delay-1" aria-label="Обратный отсчёт до свадьбы">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label" id="days-label">дней</span>
+                </div>
+
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label" id="hours-label">часов</span>
+                </div>
+
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label" id="minutes-label">минут</span>
+                </div>
+
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label" id="seconds-label">секунд</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-photo-wrap text-center">
+            <div class="polaroid polaroid--small reveal" data-reveal="zoom">
+                <div class="tape" aria-hidden="true"></div>
+
+	<p class="body-text reveal reveal-delay-1" style="max-width: 450px; margin: 22px auto 0;">
+               С нетерпением ждем нашей встречи с Вами, Дмитрий и Наталья.
+            </p>
+			<div class="polaroid__image">
+				<!-- Вставьте эту строку вместо <span> -->
+				<img src="j-P2AUJQ.jpg" alt="Описание фото">
+			</div>
+			
+                <div class="polaroid__caption">Ждём вас</div>
+            </div>
+
+            <p class="footer-note reveal">
+                Дмитрий и Наталья · 09 сентября 2026
+            </p>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            initRevealAnimations();
+            initCountdown();
+        });
+
+        function initRevealAnimations() {
+            var elements = document.querySelectorAll(".reveal");
+
+            if (!("IntersectionObserver" in window)) {
+                elements.forEach(function (element) {
+                    element.classList.add("is-visible");
+                });
+                return;
+            }
+
+            var observer = new IntersectionObserver(function (entries, observerInstance) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observerInstance.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: "0px 0px -8% 0px"
+            });
+
+            elements.forEach(function (element) {
+                observer.observe(element);
+            });
+        }
+
+        function initCountdown() {
+            var weddingDate = new Date("2026-09-05T15:30:00+03:00").getTime();
+
+            var nodes = {
+                days: document.getElementById("days"),
+                hours: document.getElementById("hours"),
+                minutes: document.getElementById("minutes"),
+                seconds: document.getElementById("seconds"),
+                daysLabel: document.getElementById("days-label"),
+                hoursLabel: document.getElementById("hours-label"),
+                minutesLabel: document.getElementById("minutes-label"),
+                secondsLabel: document.getElementById("seconds-label")
+            };
+
+            function plural(number, forms) {
+                var abs = Math.abs(number) % 100;
+                var last = abs % 10;
+
+                if (abs > 10 && abs < 20) {
+                    return forms[2];
+                }
+
+                if (last > 1 && last < 5) {
+                    return forms[1];
+                }
+
+                if (last === 1) {
+                    return forms[0];
+                }
+
+                return forms[2];
+            }
+
+            function pad(number) {
+                return String(number).padStart(2, "0");
+            }
+
+            function updateCountdown() {
+                var now = Date.now();
+                var diff = weddingDate - now;
+
+                if (diff <= 0) {
+                    nodes.days.textContent = "00";
+                    nodes.hours.textContent = "00";
+                    nodes.minutes.textContent = "00";
+                    nodes.seconds.textContent = "00";
+                    return;
+                }
+
+                var totalSeconds = Math.floor(diff / 1000);
+                var days = Math.floor(totalSeconds / 86400);
+                var hours = Math.floor((totalSeconds % 86400) / 3600);
+                var minutes = Math.floor((totalSeconds % 3600) / 60);
+                var seconds = totalSeconds % 60;
+
+                nodes.days.textContent = pad(days);
+                nodes.hours.textContent = pad(hours);
+                nodes.minutes.textContent = pad(minutes);
+                nodes.seconds.textContent = pad(seconds);
+
+                nodes.daysLabel.textContent = plural(days, ["день", "дня", "дней"]);
+                nodes.hoursLabel.textContent = plural(hours, ["час", "часа", "часов"]);
+                nodes.minutesLabel.textContent = plural(minutes, ["минута", "минуты", "минут"]);
+                nodes.secondsLabel.textContent = plural(seconds, ["секунда", "секунды", "секунд"]);
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+    </script>
+</body>
+
+</html>
