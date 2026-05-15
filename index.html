@@ -663,6 +663,39 @@
                 transform: none;
             }
         }
+
+
+
+		.location-images {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+}
+
+.location-images img {
+    width: 50%;
+    max-width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}
+
+/* Адаптация для телефона */
+@media (max-width: 768px) {
+    .location-images {
+        flex-direction: column;
+    }
+
+    .location-images img {
+        width: 100%;
+        height: 240px;
+    }
+}
+
+		
     </style>
 </head>
 
@@ -742,7 +775,7 @@
             </div>
         </section>
 
-        <section class="section section--compact text-center">
+        <!-- <section class="section section--compact text-center">
             <h2 class="title-lg reveal">Локация</h2>
 
             <div class="reveal reveal-delay-1" style="margin-top: 24px;">
@@ -757,16 +790,33 @@
             <div class="location-card reveal reveal-delay-2" data-reveal="zoom">
                 <span class="placeholder-label">Фото места проведения</span>
 				
-				<!-- <div class="polaroid__image">
-        			<img src="mesto1.jpg" alt="Место проведения мероприятия">
-					<img src="mesto2.jpg" alt="Место проведения мероприятия">
-				</div> -->
+			
             </div>
 
             <a class="button reveal reveal-delay-3" href="#" target="_blank" rel="noopener">
                 Показать на карте
             </a>
-        </section>
+        </section> -->
+
+					<section class="section section--compact text-center">
+    <h2 class="title-lg reveal">Локация</h2>
+
+    <div class="reveal reveal-delay-1" style="margin-top: 24px;">
+        <p class="body-text">
+            Ждем Вас<br>
+            в 16 часов 30 минут 05.09.2026<br>
+            в ресторане «Хуторок»<br>
+            по адресу: Ростовская обл., Хутор Ленинаван, ул. Ленина, 2
+        </p>
+    </div>
+
+    <div class="location-card reveal reveal-delay-2" data-reveal="zoom">
+        <div class="location-images">
+            <img src="mesto1.jpg" alt="Место проведения мероприятия">
+            <img src="mesto2.jpg" alt="Место проведения мероприятия">
+        </div>
+    </div>
+</section>
 
         <section class="section text-center">
             <h2 class="title-md reveal" style="margin-bottom: 48px;">Программа дня</h2>
